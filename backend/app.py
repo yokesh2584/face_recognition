@@ -32,9 +32,9 @@ def register_user():
         return jsonify({"error": "Missing required fields"}), 400
     
     # Check if the user already exists in the database
-    existing_user = db.get_user_by_email(email)  # Assume this function checks for existing users
-    if existing_user:
-        return jsonify({"error": "User already exists"}), 409 
+    # existing_user = db.get_user_by_email(email)  # Assume this function checks for existing users
+    # if existing_user:
+    #     return jsonify({"error": "User already exists"}), 409 
     
     # Convert base64 image to OpenCV format
     encoded_data = image_data.split(',')[1]
